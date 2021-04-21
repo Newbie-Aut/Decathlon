@@ -1,6 +1,9 @@
 package stepDefinitions;
 
 import java.util.Scanner;
+
+import static org.junit.Assert.*;
+
 import java.lang.Math.*;
 
 import io.cucumber.java.en.Given;
@@ -10,10 +13,11 @@ import io.cucumber.java.en.When;
 public class StepDefinitions {
 	private String compName;
 	private int runningTime;
-	double finalResult;
-	double A = 25.4347;
-	double B = 18;
-	double C = 1.81;
+	private int result;
+	private double finalResult;
+	private double A = 25.4347;
+	private double B = 18;
+	private double C = 1.81;
 
 	Scanner sc = new Scanner(System.in);
 
@@ -31,7 +35,7 @@ public class StepDefinitions {
 		System.out.println("Please enter the result of the 100m run:");
 		runningTime = sc.nextInt();
 
-		int result = (int) (A * Math.pow((B - runningTime), C));
+		result = (int) (A * Math.pow((B - runningTime), C));
 
 		System.out.println(compName + "'s score is: " + result);
 
@@ -41,5 +45,4 @@ public class StepDefinitions {
 	public void verifyScore() {
 
 	}
-
 }

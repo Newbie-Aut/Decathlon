@@ -7,5 +7,5 @@ Feature: Title of your feature
     Then I verify the <score> in step
 
     Examples: 
-      | competitor | result | score   |
-      | name1      | time   | success |
+      | competitor | result | score |
+      | name1      | time   |   861 |
